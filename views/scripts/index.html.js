@@ -5,6 +5,12 @@
 const cryptojs = require('crypto-js')
 const fs = require('fs')
 
+const { app } = require('electron').remote
+
+if(!fs.existsSync(path.join(app.getPath('userData'), 'CACHE'))) {
+  fs.mkdirSync(path.join(app.getPath('userData'), 'CACHE'))
+}
+
 var FunctionData = {
     Path: '',
     StartDate: '',
@@ -44,18 +50,18 @@ $('button.path').click(async () => {
   FunctionData.SE_Key = $('input.Key').val().toString()
   FunctionData.SE_Site = $('input.Site').val().toString()
 
-  fs.writeFileSync(path.join(__dirname, 'CACHE', 'PATH'), encrypt(FunctionData.path).toString())
-  fs.writeFileSync(path.join(__dirname, 'CACHE', 'USER'), encrypt(FunctionData.GC_User).toString())
-  fs.writeFileSync(path.join(__dirname, 'CACHE', 'PASS'), encrypt(FunctionData.GC_Pass).toString())
-  fs.writeFileSync(path.join(__dirname, 'CACHE', 'KEY'), encrypt(FunctionData.SE_Key).toString())
-  fs.writeFileSync(path.join(__dirname, 'CACHE', 'SITE'), encrypt(FunctionData.SE_Site).toString())
+  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'PATH'), encrypt(FunctionData.path).toString())
+  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'USER'), encrypt(FunctionData.GC_User).toString())
+  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'PASS'), encrypt(FunctionData.GC_Pass).toString())
+  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'KEY'), encrypt(FunctionData.SE_Key).toString())
+  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'SITE'), encrypt(FunctionData.SE_Site).toString())
 
   GenExcel(FunctionData)
 })
 
-$('input.path').val((decrypt(fs.readFileSync(path.join(__dirname, 'CACHE', 'PATH')).toString())))
-$('input.User').val((decrypt(fs.readFileSync(path.join(__dirname, 'CACHE', 'USER')).toString())))
-$('input.Pass').val((decrypt(fs.readFileSync(path.join(__dirname, 'CACHE', 'PASS')).toString())))
-$('input.Key').val((decrypt(fs.readFileSync(path.join(__dirname, 'CACHE', 'KEY')).toString())))
-$('input.Site').val((decrypt(fs.readFileSync(path.join(__dirname, 'CACHE', 'SITE')).toString())))
+$('input.path').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'PATH')).toString())))
+$('input.User').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'USER')).toString())))
+$('input.Pass').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'PASS')).toString())))
+$('input.Key').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'KEY')).toString())))
+$('input.Site').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'SITE')).toString())))
 
