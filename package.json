@@ -1,0 +1,27 @@
+{
+  "name": "energiedata",
+  "version": "1.0.3",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": ".\\node_modules\\.bin\\electron-rebuild.cmd",
+    "compile": "electron-packager ./ --all --out ./out --icon ./assets/icon.ico"
+  },
+  "author": "Tijn Hoftijzer",
+  "license": "MPL-2.0",
+  "productName": "energiedata",
+  "dependencies": {
+    "bytenode": "^1.1.6",
+    "crypto-js": "^4.0.0",
+    "exceljs": "^3.9.0",
+    "jquery": "^3.5.0",
+    "js-md5": "^0.7.3",
+    "js-sha512": "^0.8.0",
+    "node-cache": "^5.1.0"
+  },
+  "devDependencies": {
+    "electron": "^8.2.3",
+    "electron-rebuild": "^1.10.1"
+  }
+}
