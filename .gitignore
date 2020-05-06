@@ -1,4 +1,4 @@
-# Node_modules
+#Node_modules
 node_modules/
 
 #Out
@@ -6,3 +6,6 @@ out/
 
 #Cache
 views/CACHE/
+
+#VS_code
+*.code-workspace
