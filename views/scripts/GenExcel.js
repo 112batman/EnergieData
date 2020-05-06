@@ -27,7 +27,7 @@ workbook.views =
     }
 ]
 
-var sheet = workbook.addWorksheet('Sheet 1', {views: [{state: 'frozen', ySplit: 1}]})
+var sheet = workbook.addWorksheet('EnergieData', {views: [{state: 'frozen', ySplit: 1}]})
 
 const api = require('./api')
 var token
