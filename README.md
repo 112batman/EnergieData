@@ -6,7 +6,9 @@
 
 GREENCHOICE
 
-Zorg dat u toegang heeft tot de online omgeving van Greenchoice en/of de Greenchoice app. Voor **EnergieData™** gebruikt u dezelfde username en password.
+Zorg dat u toegang heeft tot de online omgeving van Greenchoice en/of de Greenchoice app. Voor
+
+**EnergieData™** gebruikt u dezelfde username en password.
 
 SOLAREDGE
 
