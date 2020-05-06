@@ -95,8 +95,17 @@ async function WriteExcel() {
         fs.mkdirSync(path.join(FunctionData.path))
     }
 
-    workbook.xlsx.writeFile(path.join(FunctionData.path, `EnergieData ${FunctionData.StartDate} tm ${FunctionData.EndDate_SE}.xlsx`))
-    $('button.path').text('Done! Ready for next request.')
+    workbook.xlsx.writeFile(path.join(FunctionData.path, `EnergieData ${FunctionData.StartDate} tm ${FunctionData.EndDate_SE}.xlsx`)).then(() => {
+        $('button.path').text('Done! Ready for next request.')
+    }).catch(err => {
+        if(err) {
+            if(err.code == 'EBUSY') {
+                $('button.path').text('Error. A file with the same file name as the output file is already open in another program, please close it first.')
+            }else {
+                $('button.path').text('An error occurred')
+            }
+        }
+    })
 }
 
 }
