@@ -101,6 +101,8 @@ async function WriteExcel() {
         if(err) {
             if(err.code == 'EBUSY') {
                 $('button.path').text('Error. A file with the same file name as the output file is already open in another program, please close it first.')
+            }else if(err.code == 'EPERM') {
+                $('button.path').text('The program does not have permissions to write to the output folder, please choose something different as your output folder')
             }else {
                 $('button.path').text('An error occurred')
             }
