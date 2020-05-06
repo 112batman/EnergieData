@@ -36,8 +36,40 @@ var help = new MenuItem({
     label: 'Help'
 })
 
+var trello = new MenuItem({
+    click: function() {
+        const path = require('path')
+
+        var win = new BrowserWindow({
+            width: 800,
+            height: 600,
+            icon: path.join(__dirname, 'assets', 'icon-no-bg.ico')
+        })
+    
+        win.loadURL('https://trello.com/b/GknEE04Z/energiedata')
+    },
+    label: 'Trello'
+})
+
+var github = new MenuItem({
+    click: function() {
+        const path = require('path')
+
+        var win = new BrowserWindow({
+            width: 800,
+            height: 600,
+            icon: path.join(__dirname, 'assets', 'icon-no-bg.ico')
+        })
+    
+        win.loadURL('https://github.com/112batman/EnergieData')
+    },
+    label: 'Github'
+})
+
 Menu.setApplicationMenu(menu)
 menu.append(help)
+menu.append(trello)
+menu.append(github)
 
 app.whenReady().then(() => {
     CreateWindow()
