@@ -17,7 +17,7 @@ function CreateWindow() {
         icon: path.join(__dirname, 'assets', 'icon-no-bg.ico')
     })
 
-    win.loadFile('./views/Jaap.html')
+    win.loadFile('./views/Index2.html')
 
     win.removeMenu()
 }

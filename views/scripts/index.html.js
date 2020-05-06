@@ -4,6 +4,7 @@
 
 const cryptojs = require('crypto-js')
 const fs = require('fs')
+const datetime = require('./modules/datetime')
 
 const { app } = require('electron').remote
 
@@ -41,10 +42,8 @@ $('button.path').click(async () => {
 
   FunctionData.path =  $('input.path').val().toString()
   FunctionData.StartDate = $('input.StartDate').val().toString()
-  var date = $('input.EndDate').val().toString().split('-')
-  var day = Number(date[2])
-  FunctionData.EndDate_GC = `${date[0]}-${date[1]}-${day + 1}`
   FunctionData.EndDate_SE = $('input.EndDate').val().toString()
+  FunctionData.EndDate_GC = datetime.AddDays($('input.EndDate').val().toString(), 1)
   FunctionData.GC_User = $('input.User').val().toString()
   FunctionData.GC_Pass = $('input.Pass').val().toString()
   FunctionData.SE_Key = $('input.Key').val().toString()
