@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "rebuild": ".\\node_modules\\.bin\\electron-rebuild.cmd",
-    "compile": "electron-packager ./ --all --out ./out --icon ./assets/icon.ico"
+    "compile": "electron-packager ./ --all --out ./out --icon ./assets/icon.ico --ignore=/views/scripts/index.html.js"
   },
   "author": "Tijn Hoftijzer",
   "license": "MPL-2.0",
