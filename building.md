@@ -1,5 +1,9 @@
 # Building
 
+## Vooraf
+
+* [ ] Nodejs en NPM installeren. [https://phoenixnap.com/kb/install-node-js-npm-on-windows](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
+
 ## De source-code downloaden
 
 Download van [GitHub](https://github.com/112batman/EnergieData) een zip van de source-code van de laatste release of van de huidige staat \(als je van de huidige staat download weet je niet zeker of het wel stable is\). Pak het zip bestand uit.
