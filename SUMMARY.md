@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Install](README.md)
+* [Home](README.md)
 
