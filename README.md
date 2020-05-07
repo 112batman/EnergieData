@@ -1,6 +1,8 @@
 # Home
 
-![](.gitbook/assets/20200506-energiedata-user-manual-1.png)
+Visit our Trello: [https://trello.com/b/GknEE04Z/energiedata](https://trello.com/b/GknEE04Z/energiedata)
 
+Visit our Github: [https://github.com/112batman/EnergieData](https://github.com/112batman/EnergieData)
 
+View our manual: [https://112batman.github.io/energiedatamanual.pdf](https://112batman.github.io/energiedatamanual.pdf)
 
