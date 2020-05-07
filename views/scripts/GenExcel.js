@@ -53,7 +53,8 @@ $.ajax(query).done(res => {
 
 async function WriteExcel() {
 
-    if(data[0].BeginDatum !== `${FunctionData.StartDate}T00:00:00`) return $('button.path').text('Invalid start date')
+    if(data[0].BeginDatum !== `${FunctionData.StartDate}T00:00:00`) return $('button.path').text('Invalid start date (gc)')
+    if(data2.energy.values[0].value === null) return $('button.path').text('Invalid start date (se)')
 
     var row = 2
     var row2 = 2
