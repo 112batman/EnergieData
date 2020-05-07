@@ -30,5 +30,5 @@ $ npm run compile
 Er is al een script gespecificeerd in package.json genaamd compile vandaar dat dit werkt, er zal voor win32, linux, mas worden ge-compiled voor alle mogelijke proccesorarchitecturen
 {% endhint %}
 
-
+Het is je gelukt! Je hebt EnergieData ge-compiled, helemaal zelf! Het resultaat zal worden geplaats in een folder 'Out' dat staat in de root van de source-code.
 
