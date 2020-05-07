@@ -53,8 +53,8 @@ $.ajax(query).done(res => {
 
 async function WriteExcel() {
 
-    if(data[0].BeginDatum !== `${FunctionData.StartDate}T00:00:00`) return $('button.path').text('Invalid start date (gc)')
-    if(data2.energy.values[0].value === null) return $('button.path').text('Invalid start date (se)')
+    if(data[0].BeginDatum !== `${FunctionData.StartDate}T00:00:00`) return $('button.path').text('Invalid start date Greenchoice')
+    if(data2.energy.values[0].value === null) return $('button.path').text('Invalid start date SolarEdge')
 
     var row = 2
     var row2 = 2
@@ -105,7 +105,7 @@ async function WriteExcel() {
             }else if(err.code == 'EPERM') {
                 $('button.path').text('The program does not have permissions to write to the output folder, please choose something different as your output folder')
             }else {
-                $('button.path').text('An error occurred')
+                $('button.path').text('Error')
             }
         }
     })

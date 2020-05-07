@@ -19,7 +19,7 @@ module.exports = {
                 "password": data.pass
             },
             "error": function() {
-                $('button.path').text('An error occurred')
+                $('button.path').text('Error')
             }
         }
 
@@ -34,7 +34,7 @@ module.exports = {
                 "Authorization": `Bearer ${data.token}`,
             },
             "error": function() {
-                $('button.path').text('An error occurred')
+                $('button.path').text('Error')
             }
         }
 
@@ -49,7 +49,7 @@ module.exports = {
                 "Authorization": `Bearer ${data.token}`
             },
             "error": function() {
-                $('button.path').text('An error occurred')
+                $('button.path').text('Error')
             }
         }
 
@@ -61,7 +61,7 @@ module.exports = {
             "method": "GET",
             "timeout": 0,
             "error": function() {
-                $('button.path').text('An error occurred')
+                $('button.path').text('Error')
             }
         }
 
