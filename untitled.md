@@ -1,6 +1,6 @@
-# Install
+# Untitled
 
-\*\*\*\*![](.gitbook/assets/0%20%281%29.png)**ENERGIEDATA™**
+\*\*\*\*![](.gitbook/assets/0.png)**ENERGIEDATA™**
 
 ## VOORBEREIDING
 
@@ -18,7 +18,7 @@ Ga naar de SolarEdge Monitoring site: [monitoring.solaredge.com/solaredge-web/p/
 
 _Figure 1: SolarEdge login scherm_
 
-Klik op “Admin” en daarna op “Site Toegang”. Ga akkoord met de voorwaarden bij “API Toegang” \([Figure 3]()\). Noteer de API sleutel en Installatie-ID want deze heeft u nodig voor **EnergieData™**. Klik op “Opslaan”. U kunt nu uitloggen.![](.gitbook/assets/2%20%281%29.png)![](.gitbook/assets/3%20%281%29.png)![](.gitbook/assets/4%20%281%29.png)![](.gitbook/assets/5%20%281%29.png)![](.gitbook/assets/6.png)
+Klik op “Admin” en daarna op “Site Toegang”. Ga akkoord met de voorwaarden bij “API Toegang” \([Figure 3]()\). Noteer de API sleutel en Installatie-ID want deze heeft u nodig voor **EnergieData™**. Klik op “Opslaan”. U kunt nu uitloggen.![](.gitbook/assets/2.png)![](.gitbook/assets/3.png)![](.gitbook/assets/4.png)![](.gitbook/assets/5.png)![](.gitbook/assets/6.png)
 
 **Piet Zonnetje**
 
@@ -36,15 +36,19 @@ Download de laatste release van de **EnergieData™** installer voor uw besturin
 
 **EnergieData™** is nu geinstalleerd.
 
+## GEBRUIK
+
 Start **EnergieData™**, voer de gevraagde gegevens in en klik op “Download!”. Zodra **EnergieData™** aangeeft “Done! Ready for next request.” is er een Excel output file gegenereerd op de door u opgegeven locatie \([Figure 3]()\).
 
-![](.gitbook/assets/7%20%281%29.png)
+![](.gitbook/assets/7.png)
 
 _Figure 3: Excel output file succesvol gegenereerd_
 
 Er kunnen zo vaak u wil nieuwe output files worden gemaakt door op “Done! Ready for next request.” te klikken. Als hierbij dezelfde start- en einddatum worden opgegeven als een vorige keer, wordt de vorige Excel output file overschreven.
 
 De opgegeven file-locatie en alle login-gegevens worden bewaard zodra u op de download-knop drukt. Deze gegevens blijven bewaard als u het programma afsluit en zijn weer zichtbaar als u **EnergieData™** opnieuw start.
+
+## EXCEL OUTPUT FILE
 
 De Excel output file heeft de volgende 5 kolommen \([Figure 4]()\):
 
@@ -63,6 +67,8 @@ Als er voor een bepaalde datum nog geen Greenchoice data beschikbaar is \(maar w
 ![](.gitbook/assets/9.png)
 
 _Figure 5: Excel output file: “Geen data”_
+
+## FOUTMELDINGEN
 
 Als de login-gegevens voor Greenchoice en/of SolarEdge niet correct zijn, zal de foutmelding “An error occurred” verschijnen op de download-knop \([Figure 6]()\). Er zal geen output file worden gegenereerd.
 
