@@ -1,6 +1,6 @@
 {
   "name": "energiedata",
-  "version": "1.0.6",
+  "version": "1.0.5",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -11,7 +11,12 @@
   "author": "Tijn Hoftijzer",
   "license": "MPL-2.0",
   "productName": "energiedata",
+  "auto-updater": {
+    "repo": "112batman/EnergieData",
+    "branch": "master"
+  },
   "dependencies": {
+    "auto-updater": "^1.0.2",
     "bytenode": "^1.1.6",
     "crypto-js": "^4.0.0",
     "exceljs": "^3.9.0",

@@ -2,7 +2,7 @@
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.*/
 
-const {app, BrowserWindow, Menu, MenuItem} = require('electron')
+const {app, BrowserWindow, Menu, MenuItem, dialog} = require('electron')
 const path = require('path')
 
 var win
@@ -86,3 +86,41 @@ app.on('activate', () => {
         CreateWindow()
     }
 })
+
+const AutoUpdater = require('auto-updater')
+const autoupdater = new AutoUpdater({
+    pathToJson: '',
+    autoupdate: false,
+    checkgit: false,
+    jsonhost: 'raw.githubusercontent.com',
+    contenthost: 'codeload.github.com',
+    progressDebounce: 0,
+    devmode: false
+})
+
+autoupdater.on('check.up-to-date', v => {
+var msg = 
+`You are running the latest version!
+Latest version: ${v}
+Your version ${v}`
+
+    dialog.showMessageBox(win, {
+        title: 'AutoUpdater',
+        message: msg
+    })
+})
+autoupdater.on('check.out-dated', (v_old, v) => {
+var msg =
+`You are running an outdated version!
+Latest version: ${v}
+Your version: ${v_old}
+
+You can get the new version at: https://github.com/112batman/EnergieData/releases`
+
+    dialog.showMessageBox(win, {
+        title: 'AutoUpdater',
+        message: msg
+    })
+})
+
+autoupdater.fire('check')

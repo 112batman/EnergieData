@@ -9,3 +9,6 @@ views/CACHE/
 
 #VS_code
 *.code-workspace
+
+#Password_encryption
+views/scripts/index.html.js
