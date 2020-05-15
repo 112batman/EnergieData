@@ -25,14 +25,13 @@ var FunctionData = {
 }
 
 function encrypt(string) {
-  var result = cryptojs.AES.encrypt(string, 'input.path')
+  //encrypt function
 
   return result
 }
 
 function decrypt(object) {
-  var bytes = cryptojs.AES.decrypt(object, 'input.path')
-  var originalText = bytes.toString(cryptojs.enc.Utf8)
+ //decrypt function
 
   return originalText
 }
@@ -49,18 +48,18 @@ $('button.path').click(async () => {
   FunctionData.SE_Key = $('input.Key').val().toString()
   FunctionData.SE_Site = $('input.Site').val().toString()
 
-  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'PATH'), encrypt(FunctionData.path).toString())
-  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'USER'), encrypt(FunctionData.GC_User).toString())
-  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'PASS'), encrypt(FunctionData.GC_Pass).toString())
-  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'KEY'), encrypt(FunctionData.SE_Key).toString())
-  fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'SITE'), encrypt(FunctionData.SE_Site).toString())
+  //fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'PATH'), encrypt(FunctionData.path).toString())
+  //fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'USER'), encrypt(FunctionData.GC_User).toString())
+  //fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'PASS'), encrypt(FunctionData.GC_Pass).toString())
+  //fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'KEY'), encrypt(FunctionData.SE_Key).toString())
+  //fs.writeFileSync(path.join(app.getPath('userData'), 'CACHE', 'SITE'), encrypt(FunctionData.SE_Site).toString())
 
   GenExcel(FunctionData)
 })
 
-$('input.path').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'PATH')).toString())))
-$('input.User').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'USER')).toString())))
-$('input.Pass').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'PASS')).toString())))
-$('input.Key').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'KEY')).toString())))
-$('input.Site').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'SITE')).toString())))
+//$('input.path').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'PATH')).toString())))
+//$('input.User').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'USER')).toString())))
+//$('input.Pass').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'PASS')).toString())))
+//$('input.Key').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'KEY')).toString())))
+//$('input.Site').val((decrypt(fs.readFileSync(path.join(app.getPath('userData'), 'CACHE', 'SITE')).toString())))
 
