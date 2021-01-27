@@ -1,3 +1,6 @@
+# Unmaintained
+This project is no longer mainted
+
 # Home
 
 EnergieData is een project dat data van Greenchoice en Solaredge ophaalt en naast elkaar zet in een Excel bestand, zo heb je dus zonder gedoe je opwekking, teruglevering en verbruik naast elkaar.
